@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'main_page.dart';
 import 'signup_page.dart';
+import 'forgot_password_page.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
@@ -54,7 +55,11 @@ class LoginPage extends StatelessWidget {
                     const SizedBox(height: 20),
                     TextButton(
                       onPressed: () {
-                        // Handle forgot password logic here
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ForgotPasswordPage()),
+                        );
                       },
                       child: const Text('Mot de passe oublié ?'),
                     ),
@@ -66,7 +71,8 @@ class LoginPage extends StatelessWidget {
                     // Handle login logic here
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => const MainPage()),
+                      MaterialPageRoute(
+                          builder: (context) => MainPage(title: 'Home')),
                     );
                   },
                   style: ElevatedButton.styleFrom(
