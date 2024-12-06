@@ -1,0 +1,17 @@
+import 'package:flutter/material.dart';
+
+class MainPage extends StatelessWidget {
+  const MainPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Main Page'),
+      ),
+      body: Center(
+        child: const Text('Welcome to the Main Page!'),
+      ),
+    );
+  }
+}
